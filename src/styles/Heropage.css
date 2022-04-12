@@ -1,0 +1,130 @@
+.primary {
+    background-image: url("../static/img/photo.png");
+    background-repeat: no-repeat;
+    background-position: 60% -70%;
+    position: absolute;
+    background-size: contain;
+    height: 100vh;
+    width: 100vw;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    margin-left: 15%;
+  }
+  
+  main {
+    position: relative;
+    height: 90vh;
+    width: 100vw;
+    overflow: hidden;
+  }
+  
+  .right-circle {
+    background: #7462E1;
+    border-radius: 50%;
+    width: 80vw;
+    height: 80vw;
+    margin-left: 60%;
+    position: absolute;
+  }
+  
+  #icon a:hover {
+    color: #7462E0;
+  }
+  
+  .content {
+    position: absolute;
+    margin-left: 120px;
+    margin-top: 120px;
+    height: 400px;
+    width: 500px;
+    padding-top: 10%;
+  }
+  
+  .content p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: brown;
+    padding-top: 2%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  .content h1 {
+    font-size: 50px;
+    color: #120844;
+    margin-top: 80px;
+    margin-right: 120px;
+    line-height: 70px;
+    padding-top: 60%;
+  }
+  
+  .content button {
+    background-color: #A4A2B2;
+    border: none;
+    color: black;
+    margin-top: 20px;
+    width: 100px;
+    height: 40px;
+  }
+  
+  .content button a {
+    text-decoration: none;
+    color: #120844;
+  }
+  
+  .content button a:hover {
+    border: #A4A2B2;
+    border-radius: 10%;
+    border-style: initial;
+  }
+  
+  card-img-top {
+    border-radius: 15px 50px;
+  }
+  
+  .card-img-top {
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px;
+  }
+  
+  #icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 120px;
+    position: absolute;
+    right: 18%;
+    bottom: 20%;
+    z-index: 30;
+  }
+  
+  #icon div {
+    height: 20px;
+    width: 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  .Icon1 {
+    color: white;
+  }
+  
+  .Icon2 {
+    color: white;
+  }
+  
+  .Icon3 {
+    color: white;
+  }
+  
+  content h2 {
+    text-align: center;
+  }
+  
+  content p {
+    padding: 100px;
+    margin-top: 200px;
+  }
