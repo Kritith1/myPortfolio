@@ -1,6 +1,8 @@
 import React from 'react'
 import "../styles/Heropage.css"
 import "../static/img/photo.png"
+import Type from './Type'
+
 
 function Heropage() {
   return (
@@ -11,8 +13,10 @@ function Heropage() {
        <div className="right-circle"></div>
        
        <div className="content">
+         
            <h2>Kriti Thapa</h2>
-               <p>I am Bsc.Csit student currently in 8th sem</p>
+          
+               <p><Type /></p>
            <button><a href="#">Download CV</a></button>
             </div>
             <div id="icon">

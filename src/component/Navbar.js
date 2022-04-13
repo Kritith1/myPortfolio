@@ -17,7 +17,7 @@ const Navbar = () => {
                    {/* <a href="#">Service</a> */}
                   {/* <a href="#">About</a> */}
                   {/* <a href="/contact">Contact</a>  */}
-                  <a href=' '><i className="fal fa-lightbulb-slash dark" style={{color: "black", cursor: "pointer"}}></i></a>
+                  {/* <a href=' '><i className="fal fa-lightbulb-slash dark" style={{color: "black", cursor: "pointer"}}></i></a>  */}
                </div>
        </nav>
    </header>

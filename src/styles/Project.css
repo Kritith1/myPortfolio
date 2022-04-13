@@ -7,7 +7,7 @@
   
   .projects h3 {
     color: black;
-    font-size: 75px;
+    font-size: 30px;
     width: 70%;
     margin: 30px auto;
     text-align: center;
@@ -31,7 +31,9 @@
     overflow: hidden;
     text-align: center;
     border: black;
-    border-style: dotted;
+    border-style: solid;
+    animation: bounce 1.5s infinite;
+    box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
   }
   
   .card i {
@@ -71,4 +73,15 @@
     background-color: transparent;
     border: 2px solid #f9004d;
     cursor: pointer;
+    box-shadow: 15px 15px 15px 5px rgba(78, 72, 77, 0.219);
+    transform: translateY(-3px);
+
+  }
+  @keyframes bounce {
+    0% {
+      tranform: translate(0, 4px);
+    }
+    50% {
+      transform: translate(0, 8px);
+    }
   }

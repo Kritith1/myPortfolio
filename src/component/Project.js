@@ -1,6 +1,9 @@
 import React ,{useState,useEffect} from 'react'
 import "../styles/Project.css"
 import axios from 'axios'
+import ProjectType from './ProjectType'
+
+
 
 function Project() {
     const[project,setProject]=useState([])
@@ -13,7 +16,7 @@ function Project() {
 
 <div className="service">
     <div className="projects">
-         <h3>Some of my projects</h3>
+         <h3><ProjectType /></h3>
     </div>
 
     <div className="box">
@@ -74,8 +77,10 @@ function Project() {
     </div> */}
 </div>
 </div>
+
     
   )
+  
 }
 
 export default Project
