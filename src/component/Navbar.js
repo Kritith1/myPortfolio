@@ -1,31 +1,31 @@
-import React from 'react'
-import "../styles/Navbar.css"
-import {Link} from 'react-router-dom'
+import React from "react";
+import "../styles/Navbar.css";
+import { Link } from "react-router-dom";
 
-
-const Navbar = () => {
+const Navbar = ({ name, link1, link2, link3 }) => {
   return (
-      <React.Fragment>
+    <React.Fragment>
       <header className="home sticky-top">
-       
-       <nav>
-             <h1>Kriti</h1> 
-               <div>
-                 <Link to='/'>Service</Link>
-                 <Link to='/contact'>Contact</Link>
-                 <Link to='/project'>Project</Link>
-                   {/* <a href="#">Service</a> */}
-                  {/* <a href="#">About</a> */}
-                  {/* <a href="/contact">Contact</a>  */}
-                  {/* <a href=' '><i className="fal fa-lightbulb-slash dark" style={{color: "black", cursor: "pointer"}}></i></a>  */}
-               </div>
-       </nav>
-   </header>
-   </React.Fragment>
-      
-    
-    
-  )
-}
+        <nav>
+          <h1>{name}</h1>
+          <div>
+            <Link to="/">{link1}</Link>
+            <Link to="/contact">{link2}</Link>
+            <Link to="/project">{link3}</Link>
 
-export default Navbar
+            {/* <a href=' '><i className="fal fa-lightbulb-slash dark" style={{color: "black", cursor: "pointer"}}></i></a>  */}
+          </div>
+        </nav>
+      </header>
+    </React.Fragment>
+  );
+};
+
+Navbar.defaultProps = {
+  name: "PORTFOLIO",
+  link1: "Service",
+  link2: "Contact",
+  link3: "Project",
+};
+
+export default Navbar;
