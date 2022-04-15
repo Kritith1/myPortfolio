@@ -67,6 +67,7 @@
   .email {
     background-color: #ebebeb;
     height: 2em;
+    color: #000;
   }
   
   .email:hover {
