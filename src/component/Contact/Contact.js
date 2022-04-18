@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../styles/Contact.css";
+import "../Contact/Contact.css";
 
 function Contact({ title, secondtitle }) {
   const initialValues = { name: "", email: "", textarea: "" };

@@ -1,7 +1,7 @@
 import React from "react";
-import Icon from "./Icon";
-import "../styles/Heropage.css";
-import "../static/img/photo.png";
+import Icon from "../Icon/Icon";
+import "../Heropage/Heropage.css";
+import "../../static/img/photo.png";
 import Type from "./Type";
 
 function Heropage({ name }) {

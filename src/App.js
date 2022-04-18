@@ -1,21 +1,21 @@
 import "./App.css";
-import Heropage from "./component/Heropage";
-import Navbar from "./component/Navbar";
+import Navbar from "./component/Navbar/Navbar";
 import React from "react";
-import Project from "./component/Project";
-import Contact from "./component/Contact";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Routing from "./routes/Routing";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
     <React.Fragment>
       <BrowserRouter>
         <Navbar />
-        <Routes>
+
+        {/* <Routes>
           <Route path="/" element={<Heropage></Heropage>}></Route>
           <Route path="/contact" element={<Contact />}></Route>
           <Route path="/project" element={<Project></Project>}></Route>
-        </Routes>
+        </Routes> */}
+        <Routing />
       </BrowserRouter>
     </React.Fragment>
   );
