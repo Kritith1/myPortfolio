@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 import "../Contact/Contact.css";
 
 function Contact({ title, secondtitle }) {
@@ -13,11 +14,25 @@ function Contact({ title, secondtitle }) {
     console.log(formValues);
   };
 
+  const checkValidate = () => {
+    setFormErrors(validate(formValues));
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormErrors(validate(formValues));
     setIsSubmit(true);
-    setFormValues(initialValues);
+    if (Object.keys(formErrors).length === 0) {
+      axios
+        .post("http://localhost:4000/contact/", {
+          name: formValues.fullName,
+          email: formValues.email,
+          message: formValues.textarea,
+        })
+        .then((res) => console.log(res))
+        .catch((err) => console.log(err));
+      setFormValues(initialValues);
+    }
   };
 
   const validate = (values) => {
@@ -35,16 +50,16 @@ function Contact({ title, secondtitle }) {
     } else if (!regex.test(values.email)) {
       errors.email = "Please enter a valid email";
     }
-    if (!values.textarea) {
-      errors.textarea = "Please type in your message";
-    }
+    // if (!values.textarea) {
+    //   errors.textarea = "Please type in your message";
+    // }
     return errors;
   };
 
   return (
     <div>
       <div class="wrapper">
-        <form class="form" onSubmit={handleSubmit}>
+        <form class="form" onSubmit={handleSubmit} method="POST">
           <div class="pageTitle title">{title} </div>
           <div class="secondaryTitle title">{secondtitle}</div>
 
@@ -54,6 +69,7 @@ function Contact({ title, secondtitle }) {
             placeholder="Name"
             name="fullName"
             onChange={handleChange}
+            onBlur={checkValidate}
             value={formValues.fullName}
           />
           <p>{formErrors.fullName}</p>
@@ -61,9 +77,10 @@ function Contact({ title, secondtitle }) {
           <input
             type="text"
             class="email formEntry"
-            placeholder="Email"
+            placeholder="Enter your email"
             name="email"
             onChange={handleChange}
+            onBlur={checkValidate}
             value={formValues.email}
           />
           <p>{formErrors.email}</p>
@@ -71,10 +88,18 @@ function Contact({ title, secondtitle }) {
           <textarea
             class="message formEntry"
             placeholder="Message"
-            name="message"
+            name="textarea"
+            onChangeCapture={handleChange}
+            onBlur={checkValidate}
           ></textarea>
           <p>{formErrors.textarea}</p>
-          <button class="submit formEntry" type="submit" value="send">
+          <button
+            class="submit formEntry"
+            type="submit"
+            value="Send"
+            className="submit"
+            onClick={handleSubmit}
+          >
             Submit
           </button>
         </form>

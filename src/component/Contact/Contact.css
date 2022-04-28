@@ -17,7 +17,7 @@
     position: absolute;
     border-top: 5px solid #0e3721;
     /*   z-index: 1; */
-    animation: bounce 1.5s infinite;
+    /* animation: bounce 1.5s infinite; */
   }
   
   body.dark-theme .form {
@@ -101,21 +101,21 @@
   }
   
   .submit {
-    width: 200px;
+    width: 482px;
     color: white;
     background-color: #0e3721;
     font-size: 20px;
+
   }
-  
   .submit:hover {
     box-shadow: 15px 15px 15px 5px rgba(78, 72, 77, 0.219);
     transform: translateY(-3px);
-    width: 300px;
+    width: 482px;
     border-top: 5px solid #0e3750;
     border-radius: 0%;
   }
   
-  @keyframes bounce {
+  /* @keyframes bounce {
     0% {
       tranform: translate(0, 4px);
     }
@@ -131,6 +131,6 @@
     .primary {
       display: block;
     }
-  }
+  } */
   
   

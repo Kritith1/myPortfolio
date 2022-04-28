@@ -6,9 +6,12 @@ import ProjectType from "./ProjectType";
 function Project() {
   const [project, setProject] = useState([]);
   useEffect(() => {
-    axios
-      .get("https://api.github.com/users/Kritith1/repos?per_page=3")
-      .then((res) => setProject(res.data));
+    axios.get("http://localhost:5000/project/3").then((res) => {
+      console.log("hello");
+
+      setProject(res.data);
+      console.log(res.data);
+    });
   }, []);
   return (
     <div className="service">
@@ -23,9 +26,9 @@ function Project() {
           return (
             <div className="card">
               <i className="far fa-user"></i>
-              <h4>{myproject.name}</h4>
+              <h4>{myproject.projectTitle}</h4>
               <div className="pra">
-                <p>(date={new Date(myproject.pushed_at).toDateString})</p>
+                <p>{new Date(myproject.projectDate).toDateString()}</p>
 
                 <p>
                   <a className="button" href="#">
