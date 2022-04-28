@@ -14,14 +14,6 @@ Personal Portfolio Backend
 ```bash
 git commit -m "specific message here"
 ```
-
-### Feature Development
-Each task/pbi has its own branch as given below
-
-Eg.:
-```bash
-git checkout -b features/featurename
-```
 ## Packages Used
 ```
 dependencies": {
