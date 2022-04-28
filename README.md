@@ -12,7 +12,7 @@ Personal Portfolio Backend
 
 ### Commit Style:
 ```bash
-git commit -m "add your specific message here"
+git commit -m "specific message here"
 ```
 
 ### Feature Development
