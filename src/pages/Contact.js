@@ -6,7 +6,7 @@ import axios from 'axios';
 function Contact()
 {
   
-  
+  const notify = () => toast("Message sent success!");
   const initialValues = { name: "", email: "", textarea: "" };
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
@@ -30,7 +30,6 @@ function Contact()
           message: formValues.textarea,
         })
         .then((res) => toast("message sent successfully"))
-        // .then((res) => console.log(res))
         .catch((err) => console.log(err));
       setFormValues(initialValues);
     }
@@ -42,7 +41,7 @@ function Contact()
       errors.name = "Name is required";
     }
     if (values.name.length <= 2) {
-      errors.name = "Name must be more than 2 characters";
+      errors.name = "Name is not valid";
     }
     if (!values.email) {
       errors.email = "Email is required";
@@ -81,11 +80,13 @@ function Contact()
               <input
               
               type="submit"
-              onClick={handleSubmit}
+              onClick={notify}
+              
               value="Send"
               class="btn"
             />
-            <ToastContainer></ToastContainer>
+            
+            <ToastContainer />
               </form>
            </div>
             </div>
