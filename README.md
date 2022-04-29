@@ -42,7 +42,7 @@ Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ### `npm build`
-Run npm build to build react app to deploy app 
+Run npm build to deploy app 
 
 
 
