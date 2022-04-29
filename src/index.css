@@ -373,7 +373,11 @@ textarea {
   .card-img-top{
     width:inherit;
   }
+  .img-fluid {
+    width: inherit;
+    height: auto;
   }
+}
 
   @media (max-width: 576px) { 
     .sub-title {
@@ -397,5 +401,9 @@ textarea {
     .card-img-top{
       width:inherit;
     }
+    .img-fluid {
+      width: inherit;
+      height: auto;
 
+  }
   }
