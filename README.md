@@ -28,9 +28,8 @@ dependencies":
 ## Screenshot of first page
 
   [![Screenshot-23.png](https://i.postimg.cc/pLjjKv0f/Screenshot-23.png)](https://postimg.cc/jDsCrpY2)
-  ## Available Scripts
-
-In the project directory, you can run:
+ 
+ ## Available Scripts
 
 ### `npm install`
 Run npm install to install the recquired dependencies.
@@ -40,3 +39,18 @@ Run npm install to install the recquired dependencies.
 ### `npm start`
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+=======
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+### `npm build`
+Run npm build to deploy app 
+
+
+
+
+
+
+
