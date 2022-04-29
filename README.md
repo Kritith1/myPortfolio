@@ -32,10 +32,17 @@ dependencies":
 
 In the project directory, you can run:
 
+### `npm install`
+Run npm install to install recquired dependencies for react app
+
+
 ### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+### `npm build`
+Run npm build to build react app to deploy app 
 
 
 
