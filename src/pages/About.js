@@ -1,7 +1,7 @@
 import React from 'react';
 import Logo from '../data/img/mefirst.jpg';
 import Button from '../components/Button';
-function About()
+function About(title,title2,about)
 {
     return (
         <section className="aboutpage"> 
@@ -36,7 +36,7 @@ function About()
 
           </div>
           <div className="col-md-6 logo-col">
-            <img className="img-fluid"  alt={"hi"}src={`${process.env.PUBLIC_URL + Logo}`}></img>
+            <img className="img-fluid"  alt={"hi"}src={Logo}></img>
           </div>
         </div>
       </div>
@@ -44,4 +44,5 @@ function About()
         </section>
     );
 }
+
 export default About

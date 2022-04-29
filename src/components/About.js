@@ -1,18 +1,17 @@
 import Logo from '../data/img/mefirst.jpg';
 import Button from '../components/Button';
-function Header()
+function About({title,title2,about})
 {
     return (
 
     <div className="about">
         <div className="row">
           <div className="col-md-6">
-          <p className="text-muted text-sub-title">Let's explain myself</p>
+          <p className="text-muted text-sub-title">{title}</p>
 
-            <h2 className="sub-title text-muted hakkimda">ABOUT</h2>
+            <h2 className="sub-title text-muted hakkimda">{title2}</h2>
             <p className="text-muted aciklama">
-            I am currently studying Bsc.Csit in 8th sem.I am studying in Asian School of Management and technology.I am 
-            a very hard working student and have gotten good grades in my studies. 
+            {about}
             </p>
             <br></br>
             <div className="about-buttons">
@@ -29,4 +28,9 @@ function Header()
 
     )
 }
-export default Header
+About.defaultProps = {
+  title:"Let's explain myself",
+  title2:"ABOUT",
+  about:" I am currently studying Bsc.Csit in 8th sem.I am studying in Asian School of Management and technology.I am a very hard working student and have gotten good grades in my studies"
+};
+export default About

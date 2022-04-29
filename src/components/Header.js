@@ -1,6 +1,6 @@
 import Logo from '../data/img/me.jpg';
 import Button from '../components/Button';
-function Header()
+function Header({name,desc})
 {
     return (
         <header className="header">
@@ -9,10 +9,9 @@ function Header()
             <p className="white title">
               Hi, this is 
             </p>
-            <h1 className="purple name">Kriti</h1>
+            <h1 className="purple name">{name}</h1>
             <p className="text-muted">
-            I am Bsc.Csit 8th sem student.I like to code beautiful websites.
-            I am currently learning react and node js.
+            {desc}
 
             </p>
             <br></br>
@@ -30,4 +29,9 @@ function Header()
 
     )
 }
+Header.defaultProps ={
+  name:"Kriti",
+  desc:"I am Bsc.Csit 8th sem student.I like to code beautiful websites.I am currently learning react and node js."
+
+};
 export default Header

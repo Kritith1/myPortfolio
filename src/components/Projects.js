@@ -29,7 +29,7 @@ function Projects()
         <div className="row">
         <Swiper pagination={{
   "clickable": true
-}} slidesPerView={2}  navigation={true} spaceBetween={20}>
+}} slidesPerView={2}  navigation={true} spaceBetween={20} >
                   {project.map((myproject) => (
                            <SwiperSlide className="mySwiper"> <Card2 
        

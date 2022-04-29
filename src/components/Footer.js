@@ -1,19 +1,19 @@
 import { NavLink } from 'react-router-dom';
   
-function Footer()
+function Footer({name,title,title1,phone,email})
 {    
     return (
         <footer>
             <div className="container">
                 <div className="row">
                     <div className="col-md-3">
-                        <p className="text-muted footer-title">Kriti Thapa</p>
+                        <p className="text-muted footer-title">{name}</p>
                         <p className="text-muted">
                         Have a nice day ;)
             </p>
                     </div>
                     <div className="col-md-3">
-                    <p className="text-muted footer-title">Important Pages</p>
+                    <p className="text-muted footer-title">{title}</p>
                         <ul>
                             <li>
                                 <NavLink to="/">Home</NavLink>
@@ -30,10 +30,10 @@ function Footer()
                         </ul>
                     </div>
                     <div className="col-md-3">
-                    <p className="text-muted footer-title">Contact Information</p>
+                    <p className="text-muted footer-title">{title1}</p>
 
-                    <a href="tel:+977 9840556623" className="text-muted">Phone: +977 9840556623</a><br></br>
-                    <a href="mailto:thapakt612@gmail.com" className="text-muted">Mail: thapakt612@gmail.com</a>
+                    <a href="tel:+977 9840556623" className="text-muted">{phone}</a><br></br>
+                    <a href="mailto:thapakt612@gmail.com" className="text-muted">{email}</a>
 
                     </div>
                     <div className="col-md-3">
@@ -50,4 +50,12 @@ function Footer()
         </footer>
     );
 }
+Footer.defaultProps ={
+    name:"Kriti Thapa",
+    title:"Important Pages",
+    title1:"Contact Information",
+    phone:"Phone: +977 9840556623",
+    email:"Mail: thapakt612@gmail.com"
+
+};
 export default Footer
