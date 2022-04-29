@@ -26,7 +26,7 @@ dependencies": {
   ```
 ## Screenshot of first page
 
-  [![first.png](https://i.postimg.cc/bwdFYCLP/first.png)](https://postimg.cc/VJQFDF3Z)
+  [![Screenshot-23.png](https://i.postimg.cc/pLjjKv0f/Screenshot-23.png)](https://postimg.cc/jDsCrpY2)
   ## Available Scripts
 
 In the project directory, you can run:
