@@ -3,7 +3,9 @@ Personal Portfolio Frontend
  * Project Setup using CRA 
  * Using React Route for routing
  * Using useeffect and usestate for contact form validation
+ * Toat for confirmation message
  * Using axios to get data from backend
+ * Cors to connect with backend
 
 Personal Portfolio Backend
 * Crud in contact form using nodejs and mondodb
@@ -15,15 +17,14 @@ Personal Portfolio Backend
 git commit -m "specific message here"
 ```
 ## Packages Used
-```
-dependencies": {
+dependencies": 
     
-    "axios",
-    "cors",
-    "react-router-dom",
-    "swiper"
-    },
-  ```
+ *   "axios",
+ *   "cors",
+ *  "react-router-dom",
+ *  "swiper"
+   
+ 
 ## Screenshot of first page
 
   [![Screenshot-23.png](https://i.postimg.cc/pLjjKv0f/Screenshot-23.png)](https://postimg.cc/jDsCrpY2)
