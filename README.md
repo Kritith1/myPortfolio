@@ -18,10 +18,10 @@ git commit -m "specific message here"
 ```
 dependencies": {
     
-    "axios": "^0.27.2",
-    "cors": "^2.8.5",
-    "react-router-dom": "^5.2.0",
-    "swiper": "^6.8.4",
+    "axios",
+    "cors",
+    "react-router-dom",
+    "swiper"
     },
   ```
 ## Screenshot of first page
