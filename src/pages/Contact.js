@@ -3,6 +3,7 @@ import { ToastContainer,toast }  from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 
+toast.configure();
 function Contact()
 {
   
@@ -10,6 +11,7 @@ function Contact()
   const initialValues = { name: "", email: "", textarea: "" };
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
+  const[formValid, setFormValid] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -21,32 +23,46 @@ function Contact()
   };
   const handleSubmit = (e) => {
     e.preventDefault();
+    setFormValid(false);
+    console.log("hello");
     setFormErrors(validate(formValues));
     if (Object.keys(formErrors).length === 0) {
       axios
-        .post("http://localhost:5000/user/", {
+        .post("https://stark-ravine-15475.herokuapp.com/user/", {
           name: formValues.name,
           email: formValues.email,
           message: formValues.textarea,
         })
-        .then((res) => toast("message sent successfully"))
-        .catch((err) => console.log(err));
-      setFormValues(initialValues);
-    }
-  };
+        .then((res) => {
+          toast("messsage sent success");
+        setFormValues(initialValues);
+      })
+        .catch((err)=>toast.error("Failed to submit!"));
+       
+      }
+      e.preventDefault();
+      return false;
+      };
+
   const validate = (values) => {
     const errors = {};
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+    const nameregex = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/i;
     if (!values.name) {
-      errors.name = "Name is required";
+      errors.name = "Fullname is required";
     }
-    if (values.name.length <= 2) {
-      errors.name = "Name is not valid";
+    else if (!nameregex.test(values.name)) {
+      errors.name = "This is not a valid name";
     }
+
     if (!values.email) {
       errors.email = "Email is required";
     } else if (!regex.test(values.email)) {
       errors.email = "This is not a valid email";
+    }
+
+    if (!values.textarea) {
+      errors.textarea = "textarea is required";
     }
 
     return errors;
@@ -80,7 +96,7 @@ function Contact()
               <input
               
               type="submit"
-              onClick={notify}
+              onClick={handleSubmit}
               
               value="Send"
               class="btn"

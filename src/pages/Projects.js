@@ -6,7 +6,7 @@ function Projects() {
   const [project, setProject] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:5000/project/6")
+      .get("https://stark-ravine-15475.herokuapp.com/project/6")
       .then((res) => setProject(res.data));
   }, []);
 
